@@ -1,6 +1,10 @@
 name: Refresh LoL champion builds
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/refresh_builds.py'
+      - '.github/workflows/refresh-builds.yml'
   schedule:
     - cron: '17 4 * * *'
 permissions:
